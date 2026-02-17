@@ -11,8 +11,7 @@ This program calculates the number of months required to save enough
 for the down payment of a house when the salary increases every 6 months.
 '''
 
-# ---------------------- INPUT SECTION ----------------------
-
+# Input Values
 while True:
     try:
         annual_salary = float(input("Enter your starting annual salary: "))
@@ -54,7 +53,7 @@ while True:
         print("Invalid input.")
 
 
-# ---------------------- INITIAL CALCULATIONS ----------------------
+#  Initial Calculations and given data
 
 down_payment = total_cost * 0.25
 current_savings = 0.0
@@ -67,17 +66,17 @@ monthly_return_rate = annual_return_rate / 12
 months = 0
 
 
-# ---------------------- MAIN SAVING LOOP ----------------------
+# loop until savings reac down payment
 
 while current_savings < down_payment:
 
-    # interest earned on savings
+    # Add interest earned on savings
     current_savings += current_savings * monthly_return_rate
 
-    # saving from salary
+    # Add saving from salary
     current_savings += monthly_salary * portion_saved
 
-    # month completed
+    # month completed Counts
     months += 1
 
     # salary raise every 6 months
@@ -86,5 +85,5 @@ while current_savings < down_payment:
         monthly_salary = annual_salary / 12
 
 
-# ---------------------- OUTPUT ----------------------
+#  OUTPUT 
 print("Number of months:", months)
