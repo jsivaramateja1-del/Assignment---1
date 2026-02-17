@@ -16,7 +16,7 @@ We repeatedly guess the middle saving rate and check whether
 the savings are too low or too high.
 """
 
-# ---------------------- CONSTANT VALUES ----------------------
+# Given Data
 
 total_cost = 1000000
 down_payment = total_cost * 0.25
@@ -29,7 +29,7 @@ monthly_return_value = 0.04 / 12
 annual_salary = float(input("Enter the starting salary: "))
 
 
-# ---------------------- IMPOSSIBLE CASE CHECK ----------------------
+#  IMPOSSIBLE CASE CHECK 
 # Try saving 100% salary
 
 current_savings = 0.0
@@ -48,7 +48,7 @@ if current_savings < down_payment - 100:
 
 else:
 
-    # ---------------------- BISECTION SEARCH ----------------------
+    # --------- BISECTION SEARCH ---------
 
     low = 0
     high = 10000
@@ -63,7 +63,7 @@ else:
         current_savings = 0.0
         monthly_salary = annual_salary / 12
 
-        # simulate 36 months
+        # loop for 36 months
         for month in range(1, months + 1):
 
             current_savings += current_savings * monthly_return_value
@@ -72,7 +72,7 @@ else:
             if month % 6 == 0:
                 monthly_salary *= (1 + semi_annual_raise)
 
-        # check closeness
+        # check given accuracy
         if abs(current_savings - down_payment) <= 100:
             break
         elif current_savings < down_payment:
