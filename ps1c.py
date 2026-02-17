@@ -3,7 +3,13 @@ ps1c.py
 Assignment 1 - Part C : Finding the Right Amount to Save
 Name      : JOGIPARTHI VENKATA AUDI SIVA RAMA TEJA
 PRN       : 250200278
-APP NO    : CDS/2025/1401'''
+APP NO    : CDS/2025/1401
+'''
+'''
+Collaborators:
+    1) S. Siva Harsha
+    2) B. Chandra Shekar Reddy
+'''
 
 """
 We now need to find WHAT percentage of salary must be saved

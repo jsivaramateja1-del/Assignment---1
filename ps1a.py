@@ -5,7 +5,11 @@ Name      : JOGIPARTHI VENKATA AUDI SIVA RAMA TEJA
 PRN       : 250200278
 APP NO    : CDS/2025/1401
 '''
-
+'''
+Collaborators:
+    1) S. Siva Harsha
+    2) B. Chandra Shekar Reddy
+'''
 
 '''
 This program calculates how many months are required to save enough money
