@@ -57,12 +57,12 @@ while True:
         print("Invalid input. Enter a numeric value.")
 
 
-# ---------------------- INITIAL CALCULATIONS ----------------------
+# ---- INITIAL CALCULATIONS ----
 
-# 25% of the house price must be paid initially
+# 25% of the house price is down payment
 down_payment = total_cost * 0.25
 
-# No savings at the beginning
+# 0 savings at the beginning
 current_savings = 0.0
 
 # Convert annual salary to monthly salary
@@ -76,15 +76,14 @@ monthly_return_rate = annual_return_rate / 12
 months = 0
 
 
-# ---------------------- MAIN LOOP (MONTHLY SIMULATION) ----------------------
-# We simulate every month until we reach the required down payment
+# Loop until savings surpass down payment
 
 while current_savings < down_payment:
 
-    # First: bank adds interest to the existing savings
+    # bank adds interest to the existing savings
     current_savings += current_savings * monthly_return_rate
 
-    # Second: we add the saved portion of this month's salary
+    # we add the saved portion of this month's salary
     current_savings += monthly_salary * portion_saved
 
     # One month completed
