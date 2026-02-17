@@ -26,7 +26,15 @@ semi_annual_raise = 0.07
 monthly_return_value = 0.04 / 12
 
 # ---------------------- INPUT ----------------------
-annual_salary = float(input("Enter the starting salary: "))
+while True:
+    try:
+        annual_salary = float(input("Enter your starting annual salary: "))
+        if annual_salary <= 0:
+            print("Salary must be positive.")
+            continue
+        break
+    except ValueError:
+        print("Invalid input.")
 
 
 #  IMPOSSIBLE CASE CHECK 
